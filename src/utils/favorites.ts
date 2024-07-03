@@ -41,7 +41,7 @@ export const favoriteWebSites: IWebSite[] = [
           {
             name: '通义千问',
             url: 'https://tongyi.aliyun.com/qianwen/',
-            desc: '通义千问',
+            desc: '阿里通义千问',
           },
           {
             name: '混元助手',
