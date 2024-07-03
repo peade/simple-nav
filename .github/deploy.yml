@@ -1,0 +1,42 @@
+name: Deploy
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+permissions:
+  actions: write
+  checks: write
+  contents: write
+  deployments: write
+  id-token: write
+  issues: write
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.6.0
+      - run: pnpm install
+      - name: Build
+        run: pnpm run build
+      - name: Deploy Simple Nav
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 要部署的文件夹 (最终会被拷贝到 gh-pages 分支下)
+          folder: ./dist
+          # 部署的分支，默认 gh-pages
+          branch: release
+          token: ${{ secrets.GITHUB_TOKEN }} # secrets.THEME_TOKEN
