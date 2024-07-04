@@ -1,4 +1,4 @@
-name: Deploy
+name: deploy simple navigation site
 on:
   workflow_dispatch: {}
   push:
@@ -28,16 +28,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
       - name: install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 8
           run_install: false
-      - run: pnpm install
-      - name: Build
+      - name: install dependencies
+        run: pnpm install
+      - name: build site
         run: pnpm run build
-      - name: Deploy Simple Nav
+      - name: deploy github pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # 要部署的文件夹 (最终会被拷贝到 gh-pages 分支下)
