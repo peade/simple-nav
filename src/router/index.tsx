@@ -6,26 +6,31 @@ import Index from '@/views/Index'
 
 const FENav = lazy(() => import('@/views/FENav/FENav'))
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Home />,
+      children: [
+        {
+          path: '/',
+          element: <Navigate to={'/index'} />,
+        },
+        {
+          path: '/index',
+          index: true,
+          element: <Index />,
+        },
+      ],
+    },
+    {
+      path: '/front-end',
+      element: <SuspenseComp Component={FENav} />,
+    },
+  ],
   {
-    path: '/',
-    element: <Home />,
-    children: [
-      {
-        path: '/',
-        element: <Navigate to={'/index'} />,
-      },
-      {
-        path: '/index',
-        index: true,
-        element: <Index />,
-      },
-    ],
-  },
-  {
-    path: '/front-end',
-    element: <SuspenseComp Component={FENav} />,
-  },
-])
+    basename: '/simple-nav/',
+  }
+)
 
 export default router

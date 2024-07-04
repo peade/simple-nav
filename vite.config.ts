@@ -4,6 +4,7 @@ import path from 'path'
 import UnoCss from 'unocss/vite'
 
 export default defineConfig({
+  base: '/simple-nav/',
   plugins: [react(), UnoCss()],
   resolve: {
     alias: {
