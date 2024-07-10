@@ -9,8 +9,8 @@
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "simple-logo.png",
-      "sizes": "1080x1080",
+      "src": "/simple-nav/512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
