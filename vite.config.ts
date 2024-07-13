@@ -34,6 +34,7 @@ export default defineConfig({
       workbox: {
         clientsClaim: true,
         skipWaiting: true,
+        globDirectory: '/simple-nav/',
         globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,webp}'],
         runtimeCaching: [
           {
@@ -42,7 +43,7 @@ export default defineConfig({
             options: {
               cacheName: 'StaticResource',
               expiration: {
-                maxEntries: 200,
+                maxEntries: 500,
                 maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
               },
               cacheableResponse: {
