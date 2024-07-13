@@ -1,0 +1,1 @@
+{"name":"Simple Nav","short_name":"Simple Nav","start_url":"/simple-nav/","display":"standalone","background_color":"#ffffff","lang":"en","scope":"/simple-nav/","description":"A simple navigation app","theme_color":"#ffffff","icons":[{"src":"/simple-nav/192x192.png","sizes":"192x192","type":"image/png"},{"src":"/simple-nav/512x512.png","sizes":"512x512","type":"image/png"}]}
