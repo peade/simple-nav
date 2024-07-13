@@ -115,4 +115,26 @@ export const favoriteWebSites: IWebSite[] = [
       },
     ],
   },
+  {
+    name: '常用工具',
+    type: 'menu',
+    children: [
+      {
+        name: '图片工具',
+        type: 'menu',
+        children: [
+          {
+            name: 'tinypng',
+            url: 'https://tinypng.com/',
+            desc: '图片压缩',
+          },
+          {
+            name: 'tinify',
+            url: 'https://tinify.cn/',
+            desc: 'tinypng国内版',
+          },
+        ],
+      },
+    ],
+  },
 ]

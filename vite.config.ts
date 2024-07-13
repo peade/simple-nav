@@ -40,7 +40,8 @@ export default defineConfig({
         runtimeCaching: [
           {
             urlPattern: /\.(js|css|json|ico|png|svg|jpg|jpeg|webp)(\?|$)/,
-            handler: 'CacheFirst',
+            // handler: 'CacheFirst',
+            handler: 'NetworkFirst',
             options: {
               networkTimeoutSeconds: 5,
               cacheName: 'StaticResource',
