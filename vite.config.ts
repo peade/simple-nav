@@ -35,12 +35,14 @@ export default defineConfig({
         clientsClaim: true,
         skipWaiting: true,
         globDirectory: '/simple-nav/',
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,webp}'],
+        globPatterns: ['**/*.{js,css,html,json,ico,png,svg,jpg,jpeg,webp}'],
+        maximumFileSizeToCacheInBytes: 10485760, // 单文件，最大存储10M
         runtimeCaching: [
           {
-            urlPattern: /\.(js|css|html|ico|png|svg|jpg|jpeg|webp)(\?|$)/,
+            urlPattern: /\.(js|css|json|ico|png|svg|jpg|jpeg|webp)(\?|$)/,
             handler: 'CacheFirst',
             options: {
+              networkTimeoutSeconds: 5,
               cacheName: 'StaticResource',
               expiration: {
                 maxEntries: 500,
