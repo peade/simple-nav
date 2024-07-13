@@ -37,6 +37,7 @@ export default defineConfig({
         globDirectory: '/simple-nav/',
         globPatterns: ['**/*.{js,css,json,ico,png,svg,jpg,jpeg,webp}'],
         maximumFileSizeToCacheInBytes: 10485760, // 单文件，最大存储10M
+        navigateFallback: 'index.html',
         runtimeCaching: [
           {
             urlPattern: /\.(js|css|json|ico|png|svg|jpg|jpeg|webp)(\?|$)/,
