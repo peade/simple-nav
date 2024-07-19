@@ -135,6 +135,22 @@ export const favoriteWebSites: IWebSite[] = [
           },
         ],
       },
+      {
+        name: '有意思的前端库',
+        type: 'menu',
+        children: [
+          {
+            name: '纯前端文本转语音',
+            url: 'https://mp.weixin.qq.com/s/yyMNFTffBlohEueSoH6XUQ',
+            desc: 'vits-web  ONNX Runtime',
+          },
+          {
+            name: 'es toolkit',
+            url: 'https://es-toolkit.slash.page/zh_hans/',
+            desc: '前端开发工具类库',
+          },
+        ],
+      },
     ],
   },
 ]
