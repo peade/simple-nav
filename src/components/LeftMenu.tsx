@@ -19,35 +19,39 @@ export default function LeftMenu() {
   }
   // const menus = favoriteWebSites
   return (
-    <>
-      <div className="p-4 font-bold text-center  bg-emerald-400	">简单导航</div>
-      <ul className="list-none m-0 p-0 leading-12 font-bold ">
-        {menus.map((mItem) => {
-          return (
-            <li key={mItem.name}>
-              <a
-                className="hover:text-violet-700 cursor-default bg-neutral-300	w-full block px-4 "
-                onClick={() => showChildren(mItem)}
-              >
-                {mItem.name}
-              </a>
-              {mItem.children && mItem.children.length > 0 && (
-                <ul className="list-none pl-0">
-                  {mItem.children.map((subItem) => {
-                    return (
-                      <li key={subItem.name}>
-                        <a className="hover:text-violet-700 cursor-default px-8">
-                          {subItem.name}
-                        </a>
-                      </li>
-                    )
-                  })}
-                </ul>
-              )}
-            </li>
-          )
-        })}
-      </ul>
-    </>
+    <div className="">
+      <div className="fixed w-240px h-full bg-gray-200 overflow-y-auto">
+        <div className="p-4 font-bold text-center  	bg-emerald-400">
+          简单导航
+        </div>
+        <ul className="list-none m-0 p-0 leading-12 font-bold ">
+          {menus.map((mItem) => {
+            return (
+              <li key={mItem.name}>
+                <a
+                  className="hover:text-violet-700 cursor-default bg-neutral-300	w-full block px-4 "
+                  onClick={() => showChildren(mItem)}
+                >
+                  {mItem.name}
+                </a>
+                {mItem.children && mItem.children.length > 0 && (
+                  <ul className="list-none pl-0">
+                    {mItem.children.map((subItem) => {
+                      return (
+                        <li key={subItem.name}>
+                          <a className="hover:text-violet-700 cursor-default px-8">
+                            {subItem.name}
+                          </a>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                )}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    </div>
   )
 }
