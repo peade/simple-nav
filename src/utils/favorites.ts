@@ -4,27 +4,6 @@ export const favoriteWebSites: IWebSite[] = [
     type: 'menu',
     children: [
       {
-        name: '国外AI对话',
-        type: 'menu',
-        children: [
-          {
-            name: 'openAI',
-            url: 'https://chat.openai.com/chat',
-            desc: 'openAI ChatGPT',
-          },
-          {
-            name: 'Gemini',
-            url: 'https://gemini.google.com',
-            desc: 'Google Gemini',
-          },
-          {
-            name: 'Claude',
-            url: 'https://claude.ai',
-            desc: 'Claude AI',
-          },
-        ],
-      },
-      {
         name: '国内AI对话',
         type: 'menu',
         children: [
@@ -73,6 +52,32 @@ export const favoriteWebSites: IWebSite[] = [
             name: '讯飞星火',
             url: 'https://xinghuo.xfyun.cn/',
             desc: '讯飞星火',
+          },
+        ],
+      },
+      {
+        name: '国外AI对话',
+        type: 'menu',
+        children: [
+          {
+            name: 'openAI',
+            url: 'https://chat.openai.com/chat',
+            desc: 'openAI ChatGPT',
+          },
+          {
+            name: 'Gemini',
+            url: 'https://gemini.google.com',
+            desc: 'Google Gemini',
+          },
+          {
+            name: 'Monica',
+            url: 'https://monica.im',
+            desc: 'Monica AI',
+          },
+          {
+            name: 'Claude',
+            url: 'https://claude.ai',
+            desc: 'Claude AI',
           },
         ],
       },

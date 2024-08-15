@@ -31,9 +31,9 @@ export default function Index() {
                                   className="no-underline text-gray-800"
                                 >
                                   <div>
-                                    <h4 className="mt-0 mb-2 font-bold text-xl">
+                                    <p className="mt-0 mb-2 font-bold text-xl">
                                       {site.name}
-                                    </h4>
+                                    </p>
                                     <p className="m-0 text-sm text-ellipsis overflow-hidden truncate">
                                       {site.desc}
                                     </p>
