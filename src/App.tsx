@@ -1,12 +1,12 @@
 import zhCN from 'antd/es/locale/zh_CN'
 import { ConfigProvider } from 'antd'
-import { RouterProvider } from 'react-router-dom'
-import router from './router'
+
+import Routes from './router'
 
 function App() {
   return (
     <ConfigProvider locale={zhCN}>
-      <RouterProvider router={router} />
+      <Routes />
     </ConfigProvider>
   )
 }

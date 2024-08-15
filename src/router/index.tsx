@@ -1,5 +1,5 @@
-import { Navigate, createBrowserRouter } from 'react-router-dom'
-import Home from '@/views/Home/Home'
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Layout from '@/views/Layout/Layout'
 import { lazy } from 'react'
 import { SuspenseComp } from './SuspenseComp'
 import Index from '@/views/Index'
@@ -10,7 +10,7 @@ const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <Home />,
+      element: <Layout />,
       children: [
         {
           path: '/',
@@ -33,4 +33,6 @@ const router = createBrowserRouter(
   }
 )
 
-export default router
+const Routes = () => <RouterProvider router={router} />
+
+export default Routes

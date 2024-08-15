@@ -13,7 +13,6 @@ export default function LeftMenu() {
       }),
     []
   )
-
   function showChildren(menuItem: IWebSite) {
     console.log(menuItem)
   }
@@ -28,18 +27,21 @@ export default function LeftMenu() {
           {menus.map((mItem) => {
             return (
               <li key={mItem.name}>
-                <a
+                <span
                   className="hover:text-violet-700 cursor-default bg-neutral-300	w-full block px-4 "
                   onClick={() => showChildren(mItem)}
                 >
                   {mItem.name}
-                </a>
+                </span>
                 {mItem.children && mItem.children.length > 0 && (
                   <ul className="list-none pl-0">
                     {mItem.children.map((subItem) => {
                       return (
                         <li key={subItem.name}>
-                          <a className="hover:text-violet-700 cursor-default px-8">
+                          <a
+                            className="hover:text-violet-700 cursor-default px-8 no-underline	text-sky-800	"
+                            href={'#' + subItem.name}
+                          >
                             {subItem.name}
                           </a>
                         </li>
