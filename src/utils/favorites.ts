@@ -29,29 +29,20 @@ export const favoriteWebSites: IWebSite[] = [
         type: 'menu',
         children: [
           {
-            name: '文心一言',
-            url: 'https://yiyan.baidu.com',
-            desc: '百度文心一言',
-          },
-          {
             name: '豆包',
             url: 'https://www.doubao.com',
             desc: '豆包AI助手',
           },
-          {
-            name: '讯飞星火',
-            url: 'https://xinghuo.xfyun.cn/',
-            desc: '讯飞星火',
-          },
+
           {
             name: '通义千问',
             url: 'https://tongyi.aliyun.com/qianwen/',
             desc: '阿里通义千问',
           },
           {
-            name: '混元助手',
-            url: 'https://yuanbao.tencent.com/bot/chat',
-            desc: '腾讯混元AI助手',
+            name: '文心一言',
+            url: 'https://yiyan.baidu.com',
+            desc: '百度文心一言',
           },
           {
             name: '智谱清言',
@@ -64,6 +55,11 @@ export const favoriteWebSites: IWebSite[] = [
             desc: '月之暗面（Moonshot AI）提供的 AI 智能助手',
           },
           {
+            name: '混元助手',
+            url: 'https://yuanbao.tencent.com/bot/chat',
+            desc: '腾讯混元AI助手',
+          },
+          {
             name: '百小应',
             url: 'https://ying.baichuan-ai.com/',
             desc: '百川智能',
@@ -72,6 +68,11 @@ export const favoriteWebSites: IWebSite[] = [
             name: '360智脑',
             url: 'https://ai.360.cn/',
             desc: '360智脑',
+          },
+          {
+            name: '讯飞星火',
+            url: 'https://xinghuo.xfyun.cn/',
+            desc: '讯飞星火',
           },
         ],
       },
@@ -193,6 +194,11 @@ export const favoriteWebSites: IWebSite[] = [
             name: 'single-spa',
             url: 'https://single-spa.js.org/',
             desc: 'single-spa  微前端框架',
+          },
+          {
+            name: 'Alfa',
+            url: 'https://alfajs.xconsole.cloud/docs/intro.html#%E4%BB%8B%E7%BB%8D',
+            desc: 'Alibaba Cloud Alfa 微前端解决方案',
           },
         ],
       },
