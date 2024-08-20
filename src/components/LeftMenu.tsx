@@ -29,11 +29,18 @@ export default function LeftMenu() {
     }, 5)
   }
 
+  function goTop() {
+    window.scrollTo(0, 0)
+  }
+
   // const menus = favoriteWebSites
   return (
     <div className="">
       <div className="fixed w-200px h-full bg-gray-200 overflow-y-auto">
-        <div className="p-4 font-bold text-center  	bg-emerald-400">
+        <div
+          className="p-4 font-bold text-center  	bg-emerald-400  cursor-default "
+          onClick={goTop}
+        >
           简单导航
         </div>
         <ul className="list-none m-0 p-0 leading-12 font-bold ">
@@ -61,7 +68,7 @@ export default function LeftMenu() {
                         >
                           <a
                             className={
-                              ' block px-4 ' +
+                              ' block px-4 no-underline cursor-default ' +
                               (curMenu === subItem.name
                                 ? ' text-black'
                                 : 'text-gray-700')
