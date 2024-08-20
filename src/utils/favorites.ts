@@ -325,7 +325,7 @@ export const favoriteWebSites: IWebSite[] = [
           },
           {
             name: 'taro',
-            url: 'https://taro-docs.jd.com/taro/docs/README',
+            url: 'https://taro-docs.jd.com/docs/next/',
             desc: 'taro  多端统一开发框架',
           },
           {
