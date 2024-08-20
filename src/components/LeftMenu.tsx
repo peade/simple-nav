@@ -17,9 +17,6 @@ export default function LeftMenu() {
       }),
     []
   )
-  function showChildren(menuItem: IWebSite) {
-    console.log(menuItem)
-  }
 
   const curMenu = useAppSelector((state) => state.curActive.value)
 
@@ -38,7 +35,7 @@ export default function LeftMenu() {
     <div className="">
       <div className="fixed w-200px h-full bg-gray-200 overflow-y-auto">
         <div
-          className="p-4 font-bold text-center  	bg-emerald-400  cursor-default "
+          className="p-4 font-bold text-center cursor-default text-30px "
           onClick={goTop}
         >
           简单导航
@@ -47,14 +44,18 @@ export default function LeftMenu() {
           {menus.map((mItem) => {
             return (
               <li key={mItem.name}>
-                <span
+                <a
                   className={
-                    'hover:text-violet-700 cursor-default bg-neutral-300	w-full block px-4 '
+                    'cursor-default bg-neutral-300	w-full block px-4  no-underline ' +
+                    (curMenu === mItem.name
+                      ? ' text-black bg-white'
+                      : 'text-gray-700')
                   }
-                  onClick={() => showChildren(mItem)}
+                  href={'#' + mItem.name}
+                  onClick={() => setCurMenu(mItem.name)}
                 >
                   {mItem.name}
-                </span>
+                </a>
                 {mItem.children && mItem.children.length > 0 && (
                   <ul className="list-none pl-0">
                     {mItem.children.map((subItem) => {

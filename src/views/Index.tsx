@@ -6,6 +6,7 @@ export default function Index() {
   const menuList = useMemo(() => {
     return favoriteWebSites.reduce(
       (acc, item) => {
+        acc.push({ name: item.name })
         if (item.children) {
           item.children.reduce((acb, child) => {
             acb.push({ name: child.name })
@@ -27,7 +28,9 @@ export default function Index() {
         {favoriteWebSites.map((item) => {
           return (
             <div key={item.name}>
-              <h2 className="mb-4 mt-50px">{item.name}</h2>
+              <h2 className="mb-4 mt-50px" id={item.name}>
+                {item.name}
+              </h2>
               {item.children &&
                 item.children.length > 0 &&
                 item.children.map((child) => {
