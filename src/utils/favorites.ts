@@ -124,86 +124,48 @@ export const favoriteWebSites: IWebSite[] = [
     type: 'menu',
     children: [
       {
-        name: '代码托管',
+        name: '教程论坛',
         type: 'menu',
         children: [
           {
-            name: 'gitee',
-            url: 'https://gitee.com/',
-            desc: '码云',
+            name: 'web dev',
+            url: 'https://web.dev/',
+            desc: 'web.dev 官方文档',
           },
           {
-            name: 'gitcode',
-            url: 'https://gitcode.net/',
-            desc: 'GitCode',
+            name: 'MDN',
+            url: 'https://developer.mozilla.org/zh-CN/',
+            desc: 'MDN Web 文档',
           },
           {
-            name: 'GitHub',
-            url: 'https://github.com',
-            desc: 'GitHub',
+            name: '书栈网',
+            url: 'https://www.bookstack.cn/',
+            desc: '书栈网',
           },
           {
-            name: 'GitLab',
-            url: 'https://gitlab.com',
-            desc: 'GitLab',
-          },
-        ],
-      },
-      {
-        name: '有意思的前端库',
-        type: 'menu',
-        children: [
-          {
-            name: '纯前端文本转语音',
-            url: 'https://mp.weixin.qq.com/s/yyMNFTffBlohEueSoH6XUQ',
-            desc: 'vits-web  ONNX Runtime',
+            name: '菜鸟教程',
+            url: 'https://www.runoob.com/',
+            desc: '菜鸟教程',
           },
           {
-            name: 'es toolkit',
-            url: 'https://es-toolkit.slash.page/zh_hans/',
-            desc: '前端开发工具类库',
-          },
-        ],
-      },
-      {
-        name: 'web开发储备',
-        type: 'menu',
-        children: [
-          {
-            name: '富文本编辑器',
-            url: 'https://github.com/JefMari/awesome-wysiwyg-editors',
-            desc: '富文本编辑器汇总',
-          },
-        ],
-      },
-      {
-        name: '微前端',
-        type: 'menu',
-        children: [
-          {
-            name: 'qiankun',
-            url: 'https://qiankun.umijs.org/zh',
-            desc: 'qiankun  微前端框架',
+            name: 'W3School',
+            url: 'https://www.w3school.com.cn/',
+            desc: 'W3School 在线教程',
           },
           {
-            name: 'micro-app',
-            url: 'https://zeroing.jd.com/micro-app/',
-            desc: 'micro-app  微前端框架',
+            name: '掘金',
+            url: 'https://juejin.cn/',
+            desc: '掘金, 一个帮助开发者成长的社区',
           },
           {
-            name: '无界',
-            url: 'https://wujie-micro.github.io/doc/',
-            desc: '无界  微前端框架',
+            name: '思否',
+            url: 'https://segmentfault.com/',
+            desc: 'SegmentFault 思否 为开发者提供问答、学习与交流编程知识的平台',
           },
           {
-            name: 'single-spa',
-            url: 'https://single-spa.js.org/',
-            desc: 'single-spa  微前端框架',
-          },
-          {
-            name: 'Alfa',
-            url: 'https://alfajs.xconsole.cloud/docs/intro.html#%E4%BB%8B%E7%BB%8D',
-            desc: 'Alibaba Cloud Alfa 微前端解决方案',
+            name: 'stackoverflow',
+            url: 'https://stackoverflow.com/',
+            desc: 'Stack Overflow - Where Developers Learn, Share, & Build Careers',
           },
         ],
       },
@@ -253,6 +215,85 @@ export const favoriteWebSites: IWebSite[] = [
           },
         ],
       },
+      {
+        name: '代码托管',
+        type: 'menu',
+        children: [
+          {
+            name: 'gitee',
+            url: 'https://gitee.com/',
+            desc: '码云',
+          },
+          {
+            name: 'gitcode',
+            url: 'https://gitcode.net/',
+            desc: 'GitCode',
+          },
+          {
+            name: 'GitHub',
+            url: 'https://github.com',
+            desc: 'GitHub',
+          },
+          {
+            name: 'GitLab',
+            url: 'https://gitlab.com',
+            desc: 'GitLab',
+          },
+        ],
+      },
+      {
+        name: 'web开发储备',
+        type: 'menu',
+        children: [
+          {
+            name: '富文本编辑器',
+            url: 'https://github.com/JefMari/awesome-wysiwyg-editors',
+            desc: '富文本编辑器汇总',
+          },
+          {
+            name: '纯前端文本转语音',
+            url: 'https://mp.weixin.qq.com/s/yyMNFTffBlohEueSoH6XUQ',
+            desc: 'vits-web  ONNX Runtime',
+          },
+          {
+            name: 'es toolkit',
+            url: 'https://es-toolkit.slash.page/zh_hans/',
+            desc: '前端开发工具类库',
+          },
+        ],
+      },
+      {
+        name: '微前端',
+        type: 'menu',
+        children: [
+          {
+            name: 'qiankun',
+            url: 'https://qiankun.umijs.org/zh',
+            desc: 'qiankun  微前端框架',
+          },
+          {
+            name: 'micro-app',
+            url: 'https://zeroing.jd.com/micro-app/',
+            desc: 'micro-app  微前端框架',
+          },
+          {
+            name: '无界',
+            url: 'https://wujie-micro.github.io/doc/',
+            desc: '无界  微前端框架',
+          },
+          {
+            name: 'single-spa',
+            url: 'https://single-spa.js.org/',
+            desc: 'single-spa  微前端框架',
+          },
+          {
+            name: 'Alfa',
+            url: 'https://alfajs.xconsole.cloud/docs/intro.html#%E4%BB%8B%E7%BB%8D',
+            desc: 'Alibaba Cloud Alfa 微前端解决方案',
+          },
+        ],
+      },
+
       {
         name: '小程序',
         type: 'menu',
@@ -305,33 +346,43 @@ export const favoriteWebSites: IWebSite[] = [
           },
         ],
       },
+
       {
-        name: '综合资料',
+        name: '算法',
         type: 'menu',
         children: [
           {
-            name: 'MDN',
-            url: 'https://developer.mozilla.org/zh-CN/',
-            desc: 'MDN Web 文档',
+            name: 'leetcode',
+            url: 'https://leetcode-cn.com/',
+            desc: 'leetcode',
           },
           {
-            name: '菜鸟教程',
-            url: 'https://www.runoob.com/',
-            desc: '菜鸟教程',
+            name: 'codewars',
+            url: 'https://www.codewars.com/',
+            desc: 'codewars',
           },
           {
-            name: 'W3School',
-            url: 'https://www.w3school.com.cn/',
-            desc: 'W3School 在线教程',
+            name: '牛客网',
+            url: 'https://www.nowcoder.com/',
+            desc: '牛客网',
+          },
+          {
+            name: 'codetop',
+            url: 'https://codetop.cc/home',
+            desc: 'codetop',
+          },
+          {
+            name: 'hello 算法',
+            url: 'https://www.hello-algo.com/',
+            desc: 'hello 算法',
+          },
+          {
+            name: 'the-algorithms',
+            url: 'https://the-algorithms.com/language/javascript',
+            desc: 'the-algorithms',
           },
         ],
       },
-    ],
-  },
-  {
-    name: '常用工具',
-    type: 'menu',
-    children: [
       {
         name: '图片工具',
         type: 'menu',
@@ -350,4 +401,26 @@ export const favoriteWebSites: IWebSite[] = [
       },
     ],
   },
+  // {
+  //   name: '常用工具',
+  //   type: 'menu',
+  //   children: [
+  //     {
+  //       name: '图片工具',
+  //       type: 'menu',
+  //       children: [
+  //         {
+  //           name: 'tinypng',
+  //           url: 'https://tinypng.com/',
+  //           desc: '图片压缩',
+  //         },
+  //         {
+  //           name: 'tinify',
+  //           url: 'https://tinify.cn/',
+  //           desc: 'tinypng国内版',
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
 ]

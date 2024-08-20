@@ -1,7 +1,10 @@
-import { useAppSelector } from '@/store/hooks'
+import { setCurActive } from '@/store/curActiveSlice'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { favoriteWebSites } from '@/utils/favorites'
 import { useMemo } from 'react'
 export default function LeftMenu() {
+  const dispatch = useAppDispatch()
+
   const menus = useMemo(
     () =>
       favoriteWebSites.filter((item) => {
@@ -19,6 +22,12 @@ export default function LeftMenu() {
   }
 
   const curMenu = useAppSelector((state) => state.curActive.value)
+
+  function setCurMenu(name: string) {
+    setTimeout(() => {
+      dispatch(setCurActive(name))
+    }, 5)
+  }
 
   // const menus = favoriteWebSites
   return (
@@ -42,7 +51,7 @@ export default function LeftMenu() {
                 {mItem.children && mItem.children.length > 0 && (
                   <ul className="list-none pl-0">
                     {mItem.children.map((subItem) => {
-                      return (
+                      return subItem.children!.length > 0 ? (
                         <li
                           key={subItem.name}
                           className={
@@ -58,10 +67,13 @@ export default function LeftMenu() {
                                 : 'text-gray-700')
                             }
                             href={'#' + subItem.name}
+                            onClick={() => setCurMenu(subItem.name)}
                           >
                             {subItem.name}
                           </a>
                         </li>
+                      ) : (
+                        <></>
                       )
                     })}
                   </ul>
