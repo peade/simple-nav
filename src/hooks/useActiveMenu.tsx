@@ -1,6 +1,9 @@
+import { setCurActive } from '@/store/curActiveSlice'
+import { useAppDispatch } from '@/store/hooks'
 import { useEffect } from 'react'
 
 export function useActiveMenu(menuList: { name: string }[]) {
+  const dispatch = useAppDispatch()
   useEffect(() => {
     const handleScroll = () => {
       let minEle = menuList[0]
@@ -18,11 +21,12 @@ export function useActiveMenu(menuList: { name: string }[]) {
           }
         }
       }
-      console.log(minEle)
+
+      dispatch(setCurActive(minEle.name))
     }
     document.addEventListener('scroll', handleScroll)
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [menuList])
+  }, [dispatch, menuList])
 }
